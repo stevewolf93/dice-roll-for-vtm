@@ -5,8 +5,7 @@ rollBtn.addEventListener("click", roll);
 function roll() {
   let numberOfDice = document.querySelector("#dice-number").value;
   let difficulty = document.querySelector("#difficulty").value;
-  let special = document.querySelector("#special");
-  let special2 = special.checked;
+  let special = document.querySelector("#special").checked;
   let result = [];
   let success = 0;
   for (let i = 0; i < numberOfDice; i++) {
@@ -16,7 +15,7 @@ function roll() {
       success -= 1;
     } else if (rollValue > 1 && rollValue < difficulty) {
       success += 0;
-    } else if (rollValue === 10 && special2 === true) {
+    } else if (rollValue === 10 && special === true) {
       success += 2;
     } else {
       success += 1;
@@ -33,7 +32,5 @@ function roll() {
   }
   let successSumContent = success;
   successSum.innerHTML = successSumContent;
-  console.log(special2);
-  console.log(result, success);
   return [result, success];
 }
