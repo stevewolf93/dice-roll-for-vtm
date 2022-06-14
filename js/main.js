@@ -1,4 +1,5 @@
-let rollBtn = document.querySelector("#roll");
+const rollBtn = document.querySelector("#roll");
+const list = document.querySelector(".list")
 rollBtn.addEventListener("click", roll);
 function roll() {
   let numberOfDice = document.querySelector("#dice-number").value;
@@ -18,6 +19,13 @@ function roll() {
     } else {
       success += 1;
     }
+  }
+  list.innerHTML =""
+  for (let i = 0; i < result.length; i++) {
+    let listItemContent = document.createTextNode(result.sort((a,b)=>a-b)[i]);
+    let listItem = document.createElement("li");
+    listItem.appendChild(listItemContent);
+    list.appendChild(listItem);
   }
   console.log(result, success)
   return [result, success];
