@@ -13,8 +13,7 @@ let finalDifficulty =
 let diceToUse = 10; // VtM is a gamesystem that uses 10 sided dice
 // special determins if a 10 is counted as 2 successes or not
 let special = true;
-// the array will later be used for hidden modificators for gm only
-let resultArray = [];
+
 /*
  * global variable to count successes
  * crit = 2 successes
@@ -66,7 +65,6 @@ for (let counter = 0; counter < numberOfDice; counter++) {
     successCount += 1;
   }
   // push every rollValue into an array for later use
-  resultArray.push(rollValue);
 }
 // conditional output based on the number of successes rolled in the loop
 if (success === 0) {
@@ -93,3 +91,5 @@ console.log(`Crit Count: ${critCount} which is ${(critCount/numberOfDice)*100} %
 console.log(`Successes: ${successCount} which is ${(successCount/numberOfDice)*100} %`);
 console.log(`fail Count: ${failuresCount} which is ${(failuresCount/numberOfDice)*100} %`);
 console.log(`Botches: ${botchesCount} which is ${(botchesCount/numberOfDice)*100} %`);
+
+

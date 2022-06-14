@@ -1,0 +1,6 @@
+@import url(./var.css);
+@import url(./structure.css);
+
+body{
+  background-color: var(--body-dark-background);
+}

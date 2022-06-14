@@ -44,3 +44,5 @@ function statistic(numberOfDice, finalDifficulty, special) {
   );
   return successCount, botchesCount, failuresCount;
 }
+
+statistic(10,8,true)
