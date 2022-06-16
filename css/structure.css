@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
   background-color: #121212;
   border: 2px solid silver;
   border-radius: 4px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #roll:hover {
@@ -94,13 +95,15 @@ body {
 
 #label-special {
   height: 50%;
+  width: 150px;
   color: silver;
   background-color: #121212;
   border: 2px solid silver;
   border-radius: 4px;
   font-size: 1.5rem;
   text-align: center;
-  padding: 0px 4px;
+  padding: 7px;
+
 }
 
 #label-special:hover {
@@ -108,7 +111,7 @@ body {
 }
 
 .glow {
-  text-shadow: 0px 0px 4px gold;
+  text-shadow: 0px 0px 4px #FF0000;
   color: silver;
   font-weight: bold;
 }
