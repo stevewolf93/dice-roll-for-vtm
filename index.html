@@ -14,9 +14,11 @@
         <!-- button to call the roll function -->
         <button type="submit" id="roll">Roll</button>
         <!-- input for number of dice -->
-        <input type="text" placeholder="Number of Dice" id="dice-number" />
+        <label for="number-dice"> Number of Dice </label>
+        <input type="number" placeholder="1-30" id="dice-number" min="1" max=30 name="number-dice"/>
         <!-- input for difficulty -->
-        <input type="text" placeholder="Difficulty" id="difficulty" />
+        <label for="difficulty">Difficulty</label>
+        <input type="number" placeholder="1-10" id="difficulty" min="2" max="10" name="difficulty"/>
         <!-- checkbox for special -->
         <label for="special" id="label-special" class="no-glow"
           >Speciality
