@@ -9,20 +9,30 @@
   </head>
   <body>
     <main>
+      <!-- container on page top for buttons and inputs -->
       <section class="button-container">
+        <!-- button to call the roll function -->
         <button type="submit" id="roll">Roll</button>
+        <!-- input for number of dice -->
         <input type="text" placeholder="Number of Dice" id="dice-number" />
+        <!-- input for difficulty -->
         <input type="text" placeholder="Difficulty" id="difficulty" />
-        <label for="special"
+        <!-- checkbox for special -->
+        <label for="special" id="label-special" class="no-glow"
           >Speciality
           <input type="checkbox" name="special" id="special" />
         </label>
+        <!--container for  the roll results and success-cont -->
       </section>
-      <section class="result-container">
-        <div class="result">
-          <h2>Successes</h2>
+      <section class="result-container hide">
+        <!-- container to bundle the headline and success-count -->
+        <div id="result-sum-container">
+          <h2>Successes:</h2>
           <span id="success-sum"></span>
-          <ul class="list"></ul>
+        </div>
+        <!-- detailed result container -->
+        <div class="result">
+          <ul class="list hide"></ul>
         </div>
       </section>
     </main>

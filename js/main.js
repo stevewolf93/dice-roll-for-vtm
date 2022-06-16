@@ -1,7 +1,9 @@
 const rollBtn = document.querySelector("#roll");
 const list = document.querySelector(".list");
 const successSum = document.querySelector("#success-sum");
+let speciality = document.querySelector("#label-special");
 rollBtn.addEventListener("click", roll);
+speciality.addEventListener("click", toggleGlow);
 function roll() {
   let numberOfDice = document.querySelector("#dice-number").value;
   let difficulty = document.querySelector("#difficulty").value;
@@ -30,7 +32,21 @@ function roll() {
     listItem.appendChild(listItemContent);
     list.appendChild(listItem);
   }
+  let resultContainer = document.querySelector(".result-container")
+  resultContainer.classList.remove("hide")
+  list.classList.remove("hide")
   let successSumContent = success;
   successSum.innerHTML = successSumContent;
   return [result, success];
+}
+
+function toggleGlow() {
+  let special = document.querySelector("#special");
+  if (special.checked === true) {
+    speciality.classList.remove("no-glow");
+    speciality.classList.add("glow");
+  } else {
+    speciality.classList.remove("glow");
+    speciality.classList.add("no-glow");
+  }
 }

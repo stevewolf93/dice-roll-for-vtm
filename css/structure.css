@@ -1,4 +1,5 @@
-*{
+/* normalize */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,7 +7,7 @@
 
 body {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100vw;
@@ -14,6 +15,7 @@ body {
   overflow: hidden;
 }
 
+/* top part */
 .button-container {
   width: 100%;
   height: 10vh;
@@ -25,7 +27,25 @@ body {
   border-bottom: 2px solid silver;
   margin-bottom: 5vh;
 }
-.button-container > input {
+
+#roll {
+  height: 50%;
+  width: 10%;
+  color: silver;
+  background-color: #121212;
+  border: 2px solid silver;
+  border-radius: 4px;
+  font-size: 2rem;
+}
+
+#roll:hover {
+  background-color: rgb(167, 7, 7);
+  border: 2px solid #121212;
+  color: #121212;
+  transition: .3s;
+}
+
+.button-container>input {
   background-color: #121212;
   color: silver;
   border: none;
@@ -35,60 +55,119 @@ body {
   font-size: 1rem;
   text-align: center;
 }
-.button-container > input::placeholder{
+
+.button-container>input::placeholder {
   color: silver;
   text-align: center;
 }
-.button-container > input:active , .button-container > input:focus {
+
+.button-container>input:active,
+.button-container>input:focus {
   outline: none;
   background-color: silver;
-  color:#121212;
+  color: #121212;
   border-bottom: 2px solid #121212;
   transition: 1250ms;
 }
-.button-container > input:active::placeholder , .button-container > input:focus::placeholder{
-  color:#121212;
+
+.button-container>input:active::placeholder,
+.button-container>input:focus::placeholder {
+  color: #121212;
   font-weight: bold;
 }
-.result-container {
-  background-color: rgb(83, 0, 0);
-  width: 90vw;
-  height: 80vh;
-  border: 2px solid rgb(116, 116, 116);
-  filter: blur(100);
+
+.button-container>label>input {
+  width: 0;
+  height: 0;
 }
-.result-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.button-container>label:hover {
+  cursor: pointer;
 }
-#roll{
-  height: 70%;
-  width: 10%;
+
+#label-special {
+  height: 50%;
   color: silver;
   background-color: #121212;
   border: 2px solid silver;
   border-radius: 4px;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0px 4px;
+}
+
+.glow {
+  text-shadow: 0px 0px 4px gold;
+  color: silver;
+  font-weight: bold;
+}
+
+/* bottom part */
+.result-container {
+  background-color: rgb(83, 0, 0);
+  width: 80vw;
+  height: 80vh;
+  border: 2px solid silver;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#result-sum-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  border: 2px solid silver;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 3rem;
+  color: silver;
+}
+
+#success-sum {
+  color: gold;
   font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 300px;
+  min-height: 60px;
 }
-#roll:hover{
-  background-color: rgb(167, 7, 7);
-  border: 2px solid #121212;
-  color:#121212;
-  transition: .3s;
-}
 
-
-
-.list{
+.list {
   color: silver;
   font-size: 2rem;
   list-style: none;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: #121212;
+  border: 2px solid silver;
+  border-radius: 4px;
+  padding: 10px;
 }
-.list > li {
+
+.hide {
+  visibility: hidden;
+}
+
+
+.list>li {
   margin-left: 1rem;
+}
+
+.list>li:first-child {
+  margin-left: 2.51rem;
+}
+
+.list>li:last-child {
+  margin-right: 2.51rem;
 }
